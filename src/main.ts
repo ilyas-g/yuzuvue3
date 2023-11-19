@@ -18,7 +18,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-    const token = process.env.VUE_APP_TOKEN;
+    const token = '4833c62c7d6ebbc8c956fae97fc5b4af';
 
     return {
         headers: {

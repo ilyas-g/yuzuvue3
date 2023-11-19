@@ -24,9 +24,9 @@ export default {
   name: 'FooterComponent',
   data() {
     return {
-      youtubeURL: process.env.VUE_APP_YOUTUBE,
-      discordURL: process.env.VUE_APP_DISCORD,
-      twitterURL: process.env.VUE_APP_TWITTER
+      youtubeURL: import.meta.env.VUE_APP_YOUTUBE,
+      discordURL: import.meta.env.VUE_APP_DISCORD,
+      twitterURL: import.meta.env.VUE_APP_TWITTER
     }
   },
   setup() {
