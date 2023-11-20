@@ -18,22 +18,9 @@
     </footer>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'FooterComponent',
-  data() {
-    return {
-      youtubeURL: import.meta.env.VUE_APP_YOUTUBE,
-      discordURL: import.meta.env.VUE_APP_DISCORD,
-      twitterURL: import.meta.env.VUE_APP_TWITTER
-    }
-  },
-  setup() {
-    const currentDate = new Date().getFullYear();
-
-    return {
-        currentDate
-    }
-  }
-}
+<script setup lang="ts">
+  const youtubeURL = import.meta.env.VUE_APP_YOUTUBE
+  const discordURL = import.meta.env.VUE_APP_DISCORD
+  const twitterURL = import.meta.env.VUE_APP_TWITTER
+  const currentDate = new Date().getFullYear();
 </script>
