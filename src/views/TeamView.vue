@@ -8,20 +8,18 @@
     <div class="teamContainer" v-else>
 
       <div v-for="player in players" :key="player.id" class="article-card">
-        <!-- <router-link :to="{ name: 'player', params: { name: player.attributes.name }}"> -->
+        <router-link :to="{ name: 'player', params: { name: player.attributes.name }}">
         <div class="content">
           <figure>
             <img :src="getImage(player.attributes.photo.data.attributes.formats.small.url)" alt="Mountains">
 
             <span class="title">{{ player.attributes.name }}</span>
             <figcaption>
-
               <img class="img-full" :src="image" />
-
             </figcaption>
           </figure>
         </div>
-      <!-- </router-link> -->
+      </router-link>
       </div>
 
       <!-- <div v-for="player in players" :key="player.id" class="article-card">

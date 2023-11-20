@@ -1,7 +1,7 @@
 // import './assets/main.css'
 import './assets/style.css'
 
-import { createApp } from 'vue'
+import { createApp, h, provide } from 'vue'
 import { createPinia } from 'pinia'
 
 import { DefaultApolloClient } from '@vue/apollo-composable';
@@ -33,15 +33,15 @@ const apolloClient = new ApolloClient({
     cache,
 });
 
-// const app = createApp({
-//     setup() {
-//         provide(DefaultApolloClient, apolloClient);
-//     },
+const app = createApp({
+    setup() {
+        provide(DefaultApolloClient, apolloClient);
+    },
 
-//     render: () => h(App),
-// });
+    render: () => h(App),
+});
 
-const app = createApp(App)
+// const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
