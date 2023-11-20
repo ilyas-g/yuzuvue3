@@ -8,6 +8,9 @@ import { DefaultApolloClient } from '@vue/apollo-composable';
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client/core';
 import { setContext } from '@apollo/client/link/context';
 
+import PerfectScrollbar from 'vue3-perfect-scrollbar';
+import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
+
 import App from './App.vue'
 import router from './router'
 

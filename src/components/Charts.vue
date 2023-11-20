@@ -23,7 +23,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import { useQuery } from '@vue/apollo-composable'
 import {PLAYER_QUERY} from "../queries/queries"
 import { ref } from 'vue'

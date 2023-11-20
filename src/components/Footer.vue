@@ -18,8 +18,7 @@
     </footer>
 </template>
 
-<script>
-
+<script lang="ts">
 export default {
   name: 'FooterComponent',
   data() {
@@ -38,65 +37,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-footer {
-  padding: 15px;
-  font-family: 'Montserrat', sans-serif;
-
-  @media screen and (min-width: $breakpoint-lg) {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-social {
-    display: flex;
-    align-items: center;
-  }
-
-  .footer__social {
-    margin-left: 15px;
-    display: flex;
-    justify-content: space-around;
-
-    a {
-      text-decoration: none;
-    }
-    &>li {
-      // margin-bottom: 32px;
-      margin-left: 10px;
-      font-size: 24px;
-      line-height: 1;
-      vertical-align: middle;
-    }
-  }
-
-  .footer__copyright {
-    font-size: 11px;
-  }
-
-  .logo {
-    @media screen and (min-width: $breakpoint-lg) {
-      margin-left: 30px;
-    }
-  }
-
-  [class^="icon-"],
-  [class*=" icon-"] {
-    // background-color: aqua;
-    // font-size: 24px;
-    &:hover::before {
-      color: $sub-color;
-    }
-    &::before {
-      color: #fff;
-    }
-  }
-}
-
-
-</style>

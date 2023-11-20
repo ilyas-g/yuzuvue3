@@ -1,8 +1,4 @@
-<style lang="scss">
-  @import "header.scss";
-</style>
-
-<script>
+<script lang="ts">
 import { ref } from 'vue'
 import myLogoSrc from "@/assets/yuzu_logo.png";
 import { useLanguageStore } from '@/stores/language'
@@ -12,7 +8,6 @@ export default {
   name: 'HeaderComponent',
   props: {
     lang: String,
-    ch: Object,
     style: Object
   },
   setup() {
@@ -22,8 +17,7 @@ export default {
 
     const language = useLanguageStore()
 
-    function changelang(paramm) {
-      console.log("plplplpl");
+    function changelang(paramm: any) {
       language.$patch({langs: paramm})
       console.log(language.langs);
     }
@@ -62,20 +56,6 @@ export default {
           :lang="locale"
           @some-event="changelang(locale)"
           />
-          <!-- <select>
-            <option :value="locale" v-for="(locale, index) in locales" v-bind:key="index">
-              {{locale}}
-            </option>
-          </select> -->
-
-          <!-- <div class="dropdown-lang-wrapper"> 
-            <span @click="langActive = !langActive">
-              <slot></slot>
-            </span>
-            <div v-if="langActive" class="dropdown-content" :class="$attrs.class">
-              {{ ch }}
-            </div>
-          </div> -->
       </header>
       <!-- <p :class="{ active: isActive }">Element active</p>
       <p v-if="isActive">ok !</p>

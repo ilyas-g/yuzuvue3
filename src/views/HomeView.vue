@@ -24,6 +24,9 @@ watchEffect(async () => {
   <main>
     <!-- <TheWelcome /> -->
     <h1><span class="d-block yellow">Yuzu</span>Gaming</h1>
+    <h1 class="text-3xl font-bold underline text-green-700">
+        Hello world!
+    </h1>
     <template v-if="datas && datas.data">
         <p>{{ datas.data.attributes.text }}</p>
         <p>{{ datas.data.id }}</p>
