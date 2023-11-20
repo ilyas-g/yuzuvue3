@@ -1,0 +1,147 @@
+.panel {
+    // color: aqua;
+    display: none;
+
+    figure {
+        display: grid;
+        overflow: hidden;
+        cursor: pointer;
+        height: 420px;
+
+        >* {
+            grid-area: 1/1;
+            transition: .4s;
+        }
+
+        figcaption {
+            display: grid;
+            align-items: center;
+            // justify-content: center;
+            color: #0000;
+            background: var(--c, #0009);
+            clip-path: inset(0 var(--_i, 100%) 0 0);
+            -webkit-mask:
+                linear-gradient(#000 0 0),
+                linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            -webkit-mask-clip: text, padding-box;
+            --_i: -0.2%;
+
+            img {
+                display: block;
+                width: 100%;
+                height: initial;
+                transform: unset;
+                padding: 10px;
+            }
+
+            p {
+                margin: auto;
+            }
+        }
+
+        &:hover {
+            figcaption {
+                //     // --_i: 0%;
+                //     --_i: -0.2%;
+
+                //     img {
+                //         transform: unset;
+                //     }
+
+                p {
+                    color: rgb(247, 0, 0);
+                    // margin: 0;
+                }
+            }
+
+            // img {
+            //     transform: scale(1.2);
+            // }
+
+        }
+    }
+}
+
+
+.panel-card {
+    width: 100%;
+    height: 420px;
+    border: 1px solid #ffffff22;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+    margin-bottom: 30px;
+
+    // @media screen and (min-width: $breakpoint-sm) {
+    //     max-width: 300px;
+    // }
+
+    @media screen and (min-width: $breakpoint-md) {
+        margin: 0 15px;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+        margin: 0 30px;
+    }
+}
+
+.panel-card:hover {
+    // transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.panel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.panel-card .content {
+    box-sizing: border-box;
+    width: 100%;
+    // position: absolute;
+    height: auto;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+
+    span {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-shadow: 2px 2px 8px #000000;
+        // box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+        @media screen and (min-width: $breakpoint-md) {
+            font-size: 24px;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: 30px;
+        }
+    }
+}
+
+.panel-card .date,
+.panel-card .title {
+    margin: 0;
+}
+
+.panel-card .date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
+}
+
+.panel-card .title {
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    // bottom: 10px;
+    // left: 15px;
+    z-index: 25;
+}

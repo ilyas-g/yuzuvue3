@@ -14,17 +14,32 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.cypress-ct.json --composite false"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.7",
+    "@typescript-eslint/parser": "^6.11.0",
+    "@vue/apollo-composable": "^4.0.0-beta.11",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6",
     "pinia": "^2.1.7",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue3-perfect-scrollbar": "^1.6.1"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
     "@types/node": "^18.18.5",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^10.4.16",
     "cypress": "^13.3.1",
+    "eslint": "^8.54.0",
+    "eslint-config-standard-with-typescript": "^40.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.18.1",
     "npm-run-all2": "^6.1.1",
     "postcss": "^8.4.31",
     "start-server-and-test": "^2.0.1",
